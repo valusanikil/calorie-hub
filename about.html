@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div id="mainContainer">
+      <div id="header"></div>
+
+      <div class="outer-container">
+        <h1>About Team</h1>
+
+        <div>
+          <p>
+            Our team is focused on building a web application as part of our
+            course project. We leverage diverse technical skills in front-end
+            and back-end development to create a user-friendly, functional
+            solution. By working collaboratively, we aim to ensure the
+            application meets all project requirements. Our combined efforts
+            drive innovation and quality in every aspect of development.
+          </p>
+        </div>
+
+        <div class="inner-container">
+          <!-- Team Member Blocks -->
+          <div class="imgBlock">
+            <h2>Nikil Valusa</h2>
+            <img src="/images/Nikil.jpeg" alt="Nikil Valusa" />
+            <p>Java Full Stack Developer</p>
+            <p>
+              Builds both front-end and back-end applications using Java
+              technologies, ensuring seamless user experiences and robust
+              server-side solutions.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/nikil-valusa/"
+              class="linkedin-icon"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+
+          <div class="imgBlock">
+            <h2>Deekshith Reddy</h2>
+            <img src="/images/Deekshith.jpg" alt="Deekshith Reddy" />
+            <p>Data Engineer</p>
+            <p>
+              Designs and manages systems for processing and storing large
+              datasets, enabling efficient data flow for decision-making.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/deekshith-reddy-thummeti-b2059b245/"
+              class="linkedin-icon"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+
+          <div class="imgBlock">
+            <h2>Ravidranath Katta</h2>
+            <img src="/images/Ravi.jpeg" alt="Ravidranath Katta" />
+            <p>Java Developer</p>
+            <p>
+              Develops, tests, and maintains Java applications, working with
+              frameworks like Spring to build back-end services and APIs.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/ravindranath-katta-2892221a9/"
+              class="linkedin-icon"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+
+          <div class="imgBlock">
+            <h2>Manoj Katakam</h2>
+            <img src="/images/Manoj Katakam.jpg" alt="Manoj Katakam" />
+            <p>Cobol Developer</p>
+            <p>
+              Maintains and optimizes legacy COBOL applications, primarily in
+              sectors like finance and healthcare.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/manoj-kumar-k-729a16137/"
+              class="linkedin-icon"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <h1 style="font-size: 30px">Calorie Intake Charts</h1>
+
+        <!-- Dynamic Calorie Intake Chart -->
+        <div class="d-flex justify-content-center">
+          <canvas
+            id="calorieChart"
+            style="width: 80%; max-width: 900px; height: 400px; margin: auto"
+          ></canvas>
+        </div>
+
+        <h2 class="text-center my-4">Chart 2 - Weekly Average Calories</h2>
+        <div class="d-flex justify-content-center">
+          <canvas
+            id="chart2"
+            style="width: 80%; max-width: 900px; height: 400px; margin: auto"
+          ></canvas>
+        </div>
+
+        <h2 class="text-center my-4">Chart 3 - Calories Burned by Activity</h2>
+        <div class="d-flex justify-content-center">
+          <canvas
+            id="chart3"
+            style="width: 80%; max-width: 900px; height: 400px; margin: auto"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="erd-head">ERD Diagram</h1>
+
+    <div class="erd-img">
+      <img src="/images/ERD.jpeg" alt="erd" />
+    </div>
+
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+
+      fetch("/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+
+      // Example dynamic Calorie Intake Chart data (replace with actual data)
+      const calorieData = [2200, 1800, 2000, 2100, 1900, 2500, 2300]; // Replace with your calorie data
+      const dateLabels = [
+        "10/01",
+        "10/02",
+        "10/03",
+        "10/04",
+        "10/05",
+        "10/06",
+        "10/07",
+      ]; // Replace with actual dates
+
+      const ctx = document.getElementById("calorieChart").getContext("2d");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: dateLabels,
+          datasets: [
+            {
+              label: "Calories",
+              data: calorieData,
+              borderColor: "rgba(54, 162, 235, 1)",
+              backgroundColor: "rgba(54, 162, 235, 0.2)",
+              pointBackgroundColor: "rgba(54, 162, 235, 1)",
+              pointBorderColor: "#fff",
+              fill: true,
+              tension: 0.4,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { title: { display: true, text: "Date" } },
+            y: {
+              beginAtZero: true,
+              title: { display: true, text: "Calories" },
+            },
+          },
+        },
+      });
+
+      // Chart 2 - Weekly Average Calories
+      const data2 = [2000, 1900, 2100, 1800, 2300, 2200, 2000]; // Replace with actual data
+      const labels2 = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+      const ctx2 = document.getElementById("chart2").getContext("2d");
+      new Chart(ctx2, {
+        type: "bar",
+        data: {
+          labels: labels2,
+          datasets: [
+            {
+              label: "Average Calories per Day",
+              data: data2,
+              backgroundColor: "rgba(75, 192, 192, 0.6)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { title: { display: true, text: "Day of the Week" } },
+            y: {
+              beginAtZero: true,
+              title: { display: true, text: "Calories" },
+            },
+          },
+        },
+      });
+
+      // Chart 3 - Calories Burned by Activity
+      const data3 = [500, 300, 450, 700]; // Replace with actual data
+      const labels3 = ["Running", "Cycling", "Swimming", "Hiking"];
+
+      const ctx3 = document.getElementById("chart3").getContext("2d");
+      new Chart(ctx3, {
+        type: "pie",
+        data: {
+          labels: labels3,
+          datasets: [
+            {
+              label: "Calories Burned",
+              data: data3,
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.6)",
+                "rgba(54, 162, 235, 0.6)",
+                "rgba(255, 206, 86, 0.6)",
+                "rgba(75, 192, 192, 0.6)",
+              ],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+        },
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

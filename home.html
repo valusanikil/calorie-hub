@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Calorie Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="home-main">
+      <!-- Hero Section -->
+
+      <h1>Welcome to Calorie Hub</h1>
+
+      <section id="hero-section">
+        <h2>Your Health, Our Priority</h2>
+        <p>
+          Our Calorie Tracker helps you monitor your daily calorie intake with
+          ease. Whether you're looking to lose weight, maintain a balanced diet,
+          or simply understand your eating habits better, our tool provides a
+          simple and effective way to keep track of your meals. Start tracking
+          today and take the first step towards a healthier you!
+        </p>
+        <img
+          src="images/calorie.png"
+          alt="Calorie Tracker Illustration"
+          id="welcome-image"
+        />
+      </section>
+
+      <!-- Benefits Section -->
+      <section id="benefits-section">
+        <h2>Why Use Our Calorie Tracker?</h2>
+        <div class="benefit">
+          <img src="/images/health ease.jpg" alt="Easy to Use Icon" />
+          <h3>Easy to Use</h3>
+          <p>
+            Our interface is designed to be simple and user-friendly, allowing
+            you to track your meals with just a few clicks.
+          </p>
+        </div>
+        <div class="benefit">
+          <img src="/images/health goal.jpg" alt="Personalized Goals Icon" />
+          <h3>Set Personalized Goals</h3>
+          <p>
+            Track your progress towards your health goals, whether it’s losing
+            weight, building muscle, or maintaining a balanced diet.
+          </p>
+        </div>
+        <div class="benefit">
+          <img src="/images/health insights.jpg" alt="Insights Icon" />
+          <h3>Gain Insights</h3>
+          <p>
+            Understand your eating patterns and make informed choices with
+            data-driven insights from your tracking history.
+          </p>
+        </div>
+      </section>
+
+      <!-- Tips Section -->
+      <section id="tips-section">
+        <h2>Healthy Eating Tips</h2>
+        <ul>
+          <li>
+            Focus on whole foods like fruits, vegetables, lean proteins, and
+            whole grains.
+          </li>
+          <li>Stay hydrated by drinking plenty of water throughout the day.</li>
+          <li>
+            Avoid processed foods and sugary snacks to maintain steady energy
+            levels.
+          </li>
+          <li>
+            Eat balanced meals with a mix of protein, carbs, and healthy fats.
+          </li>
+          <li>
+            Practice mindful eating – enjoy your food and avoid distractions.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+      // Fetch and load the header.html file
+      fetch("/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+
+      fetch("/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

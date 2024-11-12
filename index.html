@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calorie Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <header>
+      <h1>Calorie Tracker</h1>
+    </header>
+    <main>
+      <!-- Table for displaying daily calorie entries -->
+      <section id="meal-list">
+        <h2>Your Daily Calorie Intake</h2>
+        <table id="calorieTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Calories</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="calorieTableBody">
+            <!-- Daily calorie entries will be populated here -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Form for adding new calorie entries -->
+      <section id="add-meal">
+        <h2>Add Calorie Intake</h2>
+        <form onsubmit="addCalorieEntry(event)">
+          <input type="date" id="entry-date" required />
+          <input
+            type="number"
+            id="entry-calories"
+            placeholder="Calories"
+            required
+          />
+          <button type="submit">Add Entry</button>
+        </form>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <script>
+      // Fetch and load the header.html file
+      fetch("/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+
+      fetch("/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
