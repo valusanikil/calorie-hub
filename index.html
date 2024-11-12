@@ -7,7 +7,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="header"></div>
+    <div>
+      <header class="header">
+        <nav class="navbar">
+          <h1 class="logo">
+            <span class="first-part">CALORIE</span
+            ><span class="second-part">HUB</span>
+          </h1>
+          <ul class="navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Calorie Tracker</a></li>
+            <li><a href="recipe.html">Recipes</a></li>
+            <li><a href="chart.html">Calorie Chart</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <!-- <li class="logOut">
+              <a href="/HTML/login.html" class="logout-button">Log In</a>
+            </li> -->
+          </ul>
+        </nav>
+      </header>
+    </div>
     <header>
       <h1>Calorie Tracker</h1>
     </header>
@@ -45,21 +64,13 @@
       </section>
     </main>
 
-    <div id="footer"></div>
-    <script>
-      // Fetch and load the header.html file
-      fetch("/header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-        });
-
-      fetch("/footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer").innerHTML = data;
-        });
-    </script>
+    <div class="footer">
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="mailto:valusa.nikhil13@gmail.com">Gmail</a></li>
+      </ul>
+      <p>All rights reserved@</p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,79 +1,82 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f0f4f8;
-    color: #333;
+  background-color: #f0f4f8;
+  color: #333;
 }
 
 header {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
 }
 
 nav a {
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
 }
 
 nav a:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #4CAF50;
+h1,
+h2 {
+  color: #4caf50;
 }
 
-#meal-list, #add-meal {
-    margin-top: 1rem;
+#meal-list,
+#add-meal {
+  margin-top: 1rem;
 }
 
 #meals li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-    border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
 }
 
 #meals li button {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    padding: 0.3rem 0.5rem;
-    cursor: pointer;
-    border-radius: 4px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-#add-meal input, #add-meal button {
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+#add-meal input,
+#add-meal button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 #add-meal button {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
 }

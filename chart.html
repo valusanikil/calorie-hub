@@ -7,7 +7,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="header"></div>
+    <div>
+      <header class="header" style="position: relative">
+        <nav class="navbar">
+          <h1 class="logo">
+            <span class="first-part">CALORIE</span
+            ><span class="second-part">HUB</span>
+          </h1>
+          <ul class="navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Calorie Tracker</a></li>
+            <li><a href="recipe.html">Recipes</a></li>
+            <li><a href="chart.html">Calorie Chart</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <!-- <li class="logOut">
+              <a href="/HTML/login.html" class="logout-button">Log In</a>
+            </li> -->
+          </ul>
+        </nav>
+      </header>
+    </div>
     <header>
       <h1>Calorie Intake Chart</h1>
     </header>
@@ -19,23 +38,16 @@
         <canvas id="calorieChart" width="400" height="200"></canvas>
       </section>
     </main>
-    <div id="footer"></div>
+    <div class="footer">
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="mailto:valusa.nikhil13@gmail.com">Gmail</a></li>
+      </ul>
+      <p>All rights reserved@</p>
+    </div>
     <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Include custom JavaScript for rendering the chart -->
     <script src="script.js"></script>
-    <script>
-      fetch("/header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-        });
-
-      fetch("/footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer").innerHTML = data;
-        });
-    </script>
   </body>
 </html>

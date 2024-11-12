@@ -116,7 +116,6 @@
       }
 
       body {
-        margin-top: 100px;
         background: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0.5),
@@ -204,10 +203,27 @@
         color: #28a745; /* Green color for bullets */
       }
     </style>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="header"></div>
+    <header class="header" style="position: relative">
+      <nav class="navbar">
+        <h1 class="logo">
+          <span class="first-part">CALORIE</span
+          ><span class="second-part">HUB</span>
+        </h1>
+        <ul class="navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="index.html">Calorie Tracker</a></li>
+          <li><a href="recipe.html">Recipes</a></li>
+          <li><a href="chart.html">Calorie Chart</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <!-- <li class="logOut">
+              <a href="/HTML/login.html" class="logout-button">Log In</a>
+            </li> -->
+        </ul>
+      </nav>
+    </header>
     <div class="intro-paragraph">
       <h2>WECOME TO CALORIE HUB</h2>
       <p>
@@ -241,7 +257,7 @@
       <div class="card-container">
         <!-- Card 1: Saag Paneer -->
         <div class="card">
-          <img src="/images/recipe 1.jpeg" alt="Saag Paneer" />
+          <img src="images/recipe 1.jpeg" alt="Saag Paneer" />
           <div class="card-body">
             <h2>Saag Paneer</h2>
             <p>
@@ -265,7 +281,7 @@
 
         <!-- Card 2: Thandai -->
         <div class="card">
-          <img src="/images/recipe 2.jpeg" alt="Thandai" />
+          <img src="images/recipe 2.jpeg" alt="Thandai" />
           <div class="card-body">
             <h2>Thandai</h2>
             <p>
@@ -289,7 +305,7 @@
 
         <!-- Card 3: Basmati Rice -->
         <div class="card">
-          <img src="/images/recipe 3.jpeg" alt="Basmati Rice" />
+          <img src="images/recipe 3.jpeg" alt="Basmati Rice" />
           <div class="card-body">
             <h2>Basmati Rice</h2>
             <p>
@@ -313,7 +329,7 @@
 
         <!-- Card 4: Chicken Tikka Masala -->
         <div class="card">
-          <img src="/images/recipe 4.jpeg" alt="Chicken Tikka Masala" />
+          <img src="images/recipe 4.jpeg" alt="Chicken Tikka Masala" />
           <div class="card-body">
             <h2>Chicken Tikka Masala</h2>
             <p>
@@ -337,7 +353,7 @@
 
         <!-- Card 5: Papeta Par Eda -->
         <div class="card">
-          <img src="/images/recipe 5.jpeg" alt="Papeta Par Eda" />
+          <img src="images/recipe 5.jpeg" alt="Papeta Par Eda" />
           <div class="card-body">
             <h2>Papeta Par Eda</h2>
             <p>
@@ -362,7 +378,7 @@
         <!-- Card 6: Sweet Potato and Star Fruit Chaat -->
         <div class="card">
           <img
-            src="/images/recipe 6.jpeg"
+            src="images/recipe 6.jpeg"
             alt="Sweet Potato and Star Fruit Chaat"
           />
           <div class="card-body">
@@ -388,7 +404,7 @@
 
         <!-- Card 7: Yellow Rice -->
         <div class="card">
-          <img src="/images/recipe 7.jpeg" alt="Yellow Rice" />
+          <img src="images/recipe 7.jpeg" alt="Yellow Rice" />
           <div class="card-body">
             <h2>Yellow Rice</h2>
             <p>
@@ -412,7 +428,7 @@
 
         <!-- Card 8: Khichdi -->
         <div class="card">
-          <img src="/images/recipe 8.jpeg" alt="Khichdi" />
+          <img src="images/recipe 8.jpeg" alt="Khichdi" />
           <div class="card-body">
             <h2>Khichdi</h2>
             <p>
@@ -436,7 +452,7 @@
 
         <!-- Card 9: Vegan Dal -->
         <div class="card">
-          <img src="/images/recipe 9.jpeg" alt="Vegan Dal" />
+          <img src="images/recipe 9.jpeg" alt="Vegan Dal" />
           <div class="card-body">
             <h2>Vegan Dal</h2>
             <p>
@@ -459,19 +475,12 @@
         </div>
       </div>
     </div>
-    <div id="footer"></div>
-    <script>
-      fetch("/header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-        });
-
-      fetch("/footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer").innerHTML = data;
-        });
-    </script>
+    <div class="footer">
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="mailto:valusa.nikhil13@gmail.com">Gmail</a></li>
+      </ul>
+      <p>All rights reserved@</p>
+    </div>
   </body>
 </html>

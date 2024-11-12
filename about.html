@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -12,9 +12,25 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <div id="mainContainer">
-      <div id="header"></div>
-
+    <div id="mainContainer" style="margin-top: 0px">
+      <header class="header" style="position: relative">
+        <nav class="navbar">
+          <h1 class="logo">
+            <span class="first-part">CALORIE</span
+            ><span class="second-part">HUB</span>
+          </h1>
+          <ul class="navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Calorie Tracker</a></li>
+            <li><a href="recipe.html">Recipes</a></li>
+            <li><a href="chart.html">Calorie Chart</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <!-- <li class="logOut">
+                <a href="/HTML/login.html" class="logout-button">Log In</a>
+              </li> -->
+          </ul>
+        </nav>
+      </header>
       <div class="outer-container">
         <h1>About Team</h1>
 
@@ -33,7 +49,7 @@
           <!-- Team Member Blocks -->
           <div class="imgBlock">
             <h2>Nikil Valusa</h2>
-            <img src="/images/Nikil.jpeg" alt="Nikil Valusa" />
+            <img src="images/Nikil.jpeg" alt="Nikil Valusa" />
             <p>Java Full Stack Developer</p>
             <p>
               Builds both front-end and back-end applications using Java
@@ -51,7 +67,7 @@
 
           <div class="imgBlock">
             <h2>Deekshith Reddy</h2>
-            <img src="/images/Deekshith.jpg" alt="Deekshith Reddy" />
+            <img src="images/Deekshith.jpg" alt="Deekshith Reddy" />
             <p>Data Engineer</p>
             <p>
               Designs and manages systems for processing and storing large
@@ -68,7 +84,7 @@
 
           <div class="imgBlock">
             <h2>Ravidranath Katta</h2>
-            <img src="/images/Ravi.jpeg" alt="Ravidranath Katta" />
+            <img src="images/Ravi.jpeg" alt="Ravidranath Katta" />
             <p>Java Developer</p>
             <p>
               Develops, tests, and maintains Java applications, working with
@@ -85,7 +101,7 @@
 
           <div class="imgBlock">
             <h2>Manoj Katakam</h2>
-            <img src="/images/Manoj Katakam.jpg" alt="Manoj Katakam" />
+            <img src="images/Manoj Katakam.jpg" alt="Manoj Katakam" />
             <p>Cobol Developer</p>
             <p>
               Maintains and optimizes legacy COBOL applications, primarily in
@@ -132,22 +148,10 @@
     <h1 class="erd-head">ERD Diagram</h1>
 
     <div class="erd-img">
-      <img src="/images/ERD.jpeg" alt="erd" />
+      <img src="images/ERD.jpeg" alt="erd" />
     </div>
 
     <script>
-      fetch("header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-        });
-
-      fetch("/footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer").innerHTML = data;
-        });
-
       // Example dynamic Calorie Intake Chart data (replace with actual data)
       const calorieData = [2200, 1800, 2000, 2100, 1900, 2500, 2300]; // Replace with your calorie data
       const dateLabels = [
@@ -251,6 +255,12 @@
         },
       });
     </script>
-    <div id="footer"></div>
+    <div class="footer">
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="mailto:valusa.nikhil13@gmail.com">Gmail</a></li>
+      </ul>
+      <p>All rights reserved@</p>
+    </div>
   </body>
 </html>
